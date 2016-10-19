@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.3.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -5490,6 +5490,9 @@ IMOTOR_max: 500 mA</text>
 <text x="363.22" y="96.52" size="1.778" layer="98">TP7</text>
 <text x="363.22" y="93.98" size="1.778" layer="98">TP6</text>
 <text x="363.22" y="91.44" size="1.778" layer="98">TP4</text>
+<text x="396.24" y="152.4" size="1.27" layer="98" align="top-left">10102016: Added castellated edges for more stable motor mounting</text>
+<text x="396.24" y="149.86" size="1.27" layer="98" align="top-left">19102016: Connected RST to breakout pin (so that main board can reset motor board)</text>
+<text x="396.24" y="147.32" size="1.27" layer="98" align="top-left">19102016: Fixed polarity of current sensors</text>
 </plain>
 <instances>
 <instance part="JP_I2C" gate="G$1" x="5.08" y="152.4" smashed="yes">
@@ -6305,6 +6308,11 @@ IMOTOR_max: 500 mA</text>
 <label x="335.28" y="96.52" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="TP5" gate="G$1" pin="TP"/>
 </segment>
+<segment>
+<pinref part="JP_RST" gate="G$1" pin="1"/>
+<wire x1="119.38" y1="5.08" x2="124.46" y2="5.08" width="0.1524" layer="91"/>
+<label x="124.46" y="5.08" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="N$2" class="0">
 <segment>
@@ -6361,16 +6369,16 @@ IMOTOR_max: 500 mA</text>
 <pinref part="JP_POWER" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<pinref part="CUR_RIGHT" gate="G$1" pin="VSENSE-"/>
-<pinref part="R9" gate="G$1" pin="1"/>
-<wire x1="299.72" y1="30.48" x2="304.8" y2="30.48" width="0.1524" layer="91"/>
-<label x="304.8" y="30.48" size="1.27" layer="95" xref="yes"/>
+<pinref part="CUR_LEFT" gate="G$1" pin="VSENSE+"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="299.72" y1="73.66" x2="302.26" y2="73.66" width="0.1524" layer="91"/>
+<label x="302.26" y="73.66" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="CUR_LEFT" gate="G$1" pin="VSENSE-"/>
-<pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="299.72" y1="63.5" x2="302.26" y2="63.5" width="0.1524" layer="91"/>
-<label x="302.26" y="63.5" size="1.27" layer="95" xref="yes"/>
+<pinref part="CUR_RIGHT" gate="G$1" pin="VSENSE+"/>
+<pinref part="R9" gate="G$1" pin="2"/>
+<wire x1="299.72" y1="40.64" x2="304.8" y2="40.64" width="0.1524" layer="91"/>
+<label x="304.8" y="40.64" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="A4_SDA" class="0">
@@ -6633,15 +6641,15 @@ IMOTOR_max: 500 mA</text>
 <label x="177.8" y="162.56" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="CUR_LEFT" gate="G$1" pin="VSENSE+"/>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="299.72" y1="73.66" x2="302.26" y2="73.66" width="0.1524" layer="91"/>
-<label x="302.26" y="73.66" size="1.27" layer="95" xref="yes"/>
-</segment>
-<segment>
 <pinref part="MOTOR_CTRL_L" gate="G$1" pin="VS2"/>
 <wire x1="226.06" y1="162.56" x2="228.6" y2="162.56" width="0.1524" layer="91"/>
 <label x="228.6" y="162.56" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="CUR_LEFT" gate="G$1" pin="VSENSE-"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="299.72" y1="63.5" x2="302.26" y2="63.5" width="0.1524" layer="91"/>
+<label x="302.26" y="63.5" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="VMOTOR_R" class="0">
@@ -6652,15 +6660,15 @@ IMOTOR_max: 500 mA</text>
 <label x="177.8" y="127" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="CUR_RIGHT" gate="G$1" pin="VSENSE+"/>
-<pinref part="R9" gate="G$1" pin="2"/>
-<wire x1="299.72" y1="40.64" x2="304.8" y2="40.64" width="0.1524" layer="91"/>
-<label x="304.8" y="40.64" size="1.27" layer="95" xref="yes"/>
-</segment>
-<segment>
 <pinref part="MOTOR_CTRL_R" gate="G$1" pin="VS2"/>
 <wire x1="226.06" y1="127" x2="228.6" y2="127" width="0.1524" layer="91"/>
 <label x="228.6" y="127" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="CUR_RIGHT" gate="G$1" pin="VSENSE-"/>
+<pinref part="R9" gate="G$1" pin="1"/>
+<wire x1="299.72" y1="30.48" x2="304.8" y2="30.48" width="0.1524" layer="91"/>
+<label x="304.8" y="30.48" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="ESP_RESET" class="0">
