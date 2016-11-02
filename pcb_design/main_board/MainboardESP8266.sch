@@ -7347,7 +7347,7 @@ Source: RS Component / Phycomp</description>
 <part name="GND24" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND25" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY2" library="SparkFun-Aesthetics" deviceset="VDD" device=""/>
-<part name="R19" library="SparkFun-Passives" deviceset="RESISTOR-ARRAY" device="0603-ARV"/>
+<part name="R19" library="SparkFun-Passives" deviceset="RESISTOR-ARRAY" device="0603-ARV" value="10k"/>
 </parts>
 <sheets>
 <sheet>
@@ -7488,31 +7488,6 @@ input pins not 5V-tolerant)</text>
 <wire x1="304.8" y1="0" x2="304.8" y2="68.58" width="0.254" layer="97" style="shortdash"/>
 <text x="259.08" y="15.24" size="2.032" layer="98">I2C address: 0x68 (1001000)</text>
 <text x="309.88" y="154.94" size="1.778" layer="98" align="top-left">11102016: Added temperature sensor TMP102</text>
-<text x="327.66" y="20.574" size="2.54" layer="97" align="center">SDOM/AG</text>
-<text x="368.046" y="14.732" size="2.54" layer="97" align="center">0x1C
-0x1E</text>
-<wire x1="337.82" y1="22.86" x2="337.82" y2="10.922" width="0.2032" layer="97"/>
-<wire x1="337.82" y1="10.922" x2="317.5" y2="10.922" width="0.2032" layer="97"/>
-<wire x1="317.5" y1="10.922" x2="317.5" y2="14.732" width="0.2032" layer="97"/>
-<wire x1="317.5" y1="14.732" x2="317.5" y2="18.542" width="0.2032" layer="97"/>
-<wire x1="317.5" y1="18.542" x2="317.5" y2="22.86" width="0.2032" layer="97"/>
-<wire x1="317.5" y1="22.86" x2="337.82" y2="22.86" width="0.2032" layer="97"/>
-<wire x1="337.82" y1="22.86" x2="358.14" y2="22.86" width="0.2032" layer="97"/>
-<wire x1="358.14" y1="22.86" x2="375.92" y2="22.86" width="0.2032" layer="97"/>
-<wire x1="375.92" y1="22.86" x2="375.92" y2="18.542" width="0.2032" layer="97"/>
-<wire x1="375.92" y1="18.542" x2="375.92" y2="14.732" width="0.2032" layer="97"/>
-<wire x1="375.92" y1="14.732" x2="375.92" y2="10.922" width="0.2032" layer="97"/>
-<wire x1="375.92" y1="10.922" x2="358.14" y2="10.922" width="0.2032" layer="97"/>
-<wire x1="358.14" y1="10.922" x2="337.82" y2="10.922" width="0.2032" layer="97"/>
-<wire x1="317.5" y1="18.542" x2="375.92" y2="18.542" width="0.2032" layer="97"/>
-<wire x1="317.5" y1="14.732" x2="375.92" y2="14.732" width="0.2032" layer="97"/>
-<text x="347.98" y="20.32" size="2.54" layer="97" align="center">AG Addr.</text>
-<text x="327.406" y="14.732" size="2.54" layer="97" align="center">0
-1</text>
-<text x="368.3" y="20.32" size="2.54" layer="97" align="center">M Addr.</text>
-<wire x1="358.14" y1="22.86" x2="358.14" y2="10.922" width="0.2032" layer="97"/>
-<text x="347.726" y="14.732" size="2.54" layer="97" align="center">0x6A
-0x6B</text>
 <text x="347.98" y="27.94" size="2.032" layer="97" align="center">Set the SDO_AG and SDO_M to set the
 accel/gryo and mag I2C addresses:</text>
 <text x="307.34" y="35.56" size="2.54" layer="94">I2C Address Table (IMU)</text>
@@ -7527,8 +7502,7 @@ accel/gryo and mag I2C addresses:</text>
 <text x="434.34" y="106.68" size="2.54" layer="94">I2C Address Table (overall)</text>
 <wire x1="431.8" y1="111.76" x2="497.84" y2="111.76" width="0.254" layer="97" style="shortdash"/>
 <text x="444.5" y="56.134" size="2.54" layer="97" align="center">SDOM/AG</text>
-<text x="484.886" y="50.292" size="2.54" layer="97" align="center">0x1C
-0x1E</text>
+<text x="484.886" y="50.8" size="2.54" layer="97" align="bottom-center">0x1C</text>
 <wire x1="454.66" y1="58.42" x2="454.66" y2="46.482" width="0.2032" layer="97"/>
 <wire x1="454.66" y1="46.482" x2="434.34" y2="46.482" width="0.2032" layer="97"/>
 <wire x1="434.34" y1="46.482" x2="434.34" y2="50.292" width="0.2032" layer="97"/>
@@ -7545,12 +7519,10 @@ accel/gryo and mag I2C addresses:</text>
 <wire x1="434.34" y1="54.102" x2="492.76" y2="54.102" width="0.2032" layer="97"/>
 <wire x1="434.34" y1="50.292" x2="492.76" y2="50.292" width="0.2032" layer="97"/>
 <text x="464.82" y="55.88" size="2.54" layer="97" align="center">AG Addr.</text>
-<text x="444.246" y="50.292" size="2.54" layer="97" align="center">0
-1</text>
+<text x="444.246" y="50.8" size="2.54" layer="97" align="bottom-center">0</text>
 <text x="485.14" y="55.88" size="2.54" layer="97" align="center">M Addr.</text>
 <wire x1="474.98" y1="58.42" x2="474.98" y2="46.482" width="0.2032" layer="97"/>
-<text x="464.566" y="50.292" size="2.54" layer="97" align="center">0x6A
-0x6B</text>
+<text x="464.566" y="50.8" size="2.54" layer="97" align="bottom-center">0x6A</text>
 <text x="434.34" y="60.96" size="2.54" layer="97">IMU</text>
 <text x="434.34" y="71.12" size="2.54" layer="97">Current sensor</text>
 <text x="434.34" y="101.6" size="2.54" layer="97">Temperature sensor</text>
@@ -7561,6 +7533,38 @@ accel/gryo and mag I2C addresses:</text>
 <text x="439.42" y="86.36" size="2.54" layer="98">I2C address: 0x03</text>
 <text x="439.42" y="66.04" size="2.54" layer="98">I2C address: 0x45</text>
 <text x="309.88" y="139.7" size="1.778" layer="98" align="top-left">20102016: Added I2C address table</text>
+<text x="309.88" y="121.92" size="2.54" layer="98" align="top-left">TODO:</text>
+<text x="309.88" y="137.16" size="1.778" layer="98" align="top-left">01112016: Moved RGB LEDs from GPIO16 to GPIO5 (since GPIO16 is tied to RESET and cannot be used).
+                  Note that WS2812 RGB LEDs and the regular indicator LED are both connected to GPIO5.</text>
+<text x="464.566" y="46.99" size="2.54" layer="98" align="bottom-center">0x6B</text>
+<text x="484.886" y="46.99" size="2.54" layer="98" align="bottom-center">0x1E</text>
+<text x="444.246" y="46.99" size="2.54" layer="98" align="bottom-center">1</text>
+<text x="327.66" y="20.574" size="2.54" layer="97" align="center">SDOM/AG</text>
+<text x="368.046" y="15.24" size="2.54" layer="97" align="bottom-center">0x1C</text>
+<wire x1="337.82" y1="22.86" x2="337.82" y2="10.922" width="0.2032" layer="97"/>
+<wire x1="337.82" y1="10.922" x2="317.5" y2="10.922" width="0.2032" layer="97"/>
+<wire x1="317.5" y1="10.922" x2="317.5" y2="14.732" width="0.2032" layer="97"/>
+<wire x1="317.5" y1="14.732" x2="317.5" y2="18.542" width="0.2032" layer="97"/>
+<wire x1="317.5" y1="18.542" x2="317.5" y2="22.86" width="0.2032" layer="97"/>
+<wire x1="317.5" y1="22.86" x2="337.82" y2="22.86" width="0.2032" layer="97"/>
+<wire x1="337.82" y1="22.86" x2="358.14" y2="22.86" width="0.2032" layer="97"/>
+<wire x1="358.14" y1="22.86" x2="375.92" y2="22.86" width="0.2032" layer="97"/>
+<wire x1="375.92" y1="22.86" x2="375.92" y2="18.542" width="0.2032" layer="97"/>
+<wire x1="375.92" y1="18.542" x2="375.92" y2="14.732" width="0.2032" layer="97"/>
+<wire x1="375.92" y1="14.732" x2="375.92" y2="10.922" width="0.2032" layer="97"/>
+<wire x1="375.92" y1="10.922" x2="358.14" y2="10.922" width="0.2032" layer="97"/>
+<wire x1="358.14" y1="10.922" x2="337.82" y2="10.922" width="0.2032" layer="97"/>
+<wire x1="317.5" y1="18.542" x2="375.92" y2="18.542" width="0.2032" layer="97"/>
+<wire x1="317.5" y1="14.732" x2="375.92" y2="14.732" width="0.2032" layer="97"/>
+<text x="347.98" y="20.32" size="2.54" layer="97" align="center">AG Addr.</text>
+<text x="327.406" y="15.24" size="2.54" layer="97" align="bottom-center">0</text>
+<text x="368.3" y="20.32" size="2.54" layer="97" align="center">M Addr.</text>
+<wire x1="358.14" y1="22.86" x2="358.14" y2="10.922" width="0.2032" layer="97"/>
+<text x="347.726" y="15.24" size="2.54" layer="97" align="bottom-center">0x6A</text>
+<text x="347.726" y="11.43" size="2.54" layer="98" align="bottom-center">0x6B</text>
+<text x="368.046" y="11.43" size="2.54" layer="98" align="bottom-center">0x1E</text>
+<text x="327.406" y="11.43" size="2.54" layer="98" align="bottom-center">1</text>
+<text x="417.576" y="8.89" size="2.54" layer="94">Daniel Pickem</text>
 </plain>
 <instances>
 <instance part="R10" gate="G$1" x="170.18" y="53.34" smashed="yes" rot="R180">
@@ -7735,7 +7739,7 @@ accel/gryo and mag I2C addresses:</text>
 <attribute name="TP_SIGNAL_NAME" x="281.94" y="171.45" size="1.778" layer="97" rot="R90"/>
 </instance>
 <instance part="FRAME2" gate="G$1" x="248.92" y="0"/>
-<instance part="FRAME2" gate="G$2" x="393.7" y="0"/>
+<instance part="FRAME2" gate="G$2" x="396.24" y="0"/>
 <instance part="D1" gate="G$1" x="266.7" y="101.6"/>
 <instance part="D2" gate="G$1" x="266.7" y="78.74"/>
 <instance part="U2" gate="G$1" x="271.78" y="35.56"/>
@@ -7757,10 +7761,22 @@ accel/gryo and mag I2C addresses:</text>
 <instance part="GND24" gate="1" x="327.66" y="48.26"/>
 <instance part="GND25" gate="1" x="317.5" y="48.26"/>
 <instance part="SUPPLY2" gate="VDD" x="353.06" y="88.9"/>
-<instance part="R19" gate="A" x="408.94" y="86.36" rot="R90"/>
-<instance part="R19" gate="B" x="414.02" y="86.36" rot="R90"/>
-<instance part="R19" gate="C" x="419.1" y="86.36" rot="R90"/>
-<instance part="R19" gate="D" x="424.18" y="86.36" rot="R90"/>
+<instance part="R19" gate="A" x="408.94" y="86.36" smashed="yes" rot="R90">
+<attribute name="NAME" x="412.5214" y="80.01" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="412.242" y="87.63" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R19" gate="B" x="414.02" y="86.36" smashed="yes" rot="R90">
+<attribute name="NAME" x="417.6014" y="80.01" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="417.322" y="87.63" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R19" gate="C" x="419.1" y="86.36" smashed="yes" rot="R90">
+<attribute name="NAME" x="422.6814" y="80.01" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="422.402" y="87.63" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R19" gate="D" x="424.18" y="86.36" smashed="yes" rot="R90">
+<attribute name="NAME" x="427.7614" y="80.01" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="427.482" y="87.63" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -8232,17 +8248,6 @@ accel/gryo and mag I2C addresses:</text>
 <label x="274.32" y="149.86" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="GPIO5" class="0">
-<segment>
-<wire x1="111.76" y1="40.64" x2="111.76" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="40.64" x2="121.92" y2="40.64" width="0.1524" layer="91"/>
-<junction x="111.76" y="40.64"/>
-<label x="121.92" y="40.64" size="1.27" layer="95" xref="yes"/>
-<pinref part="LED_USER" gate="G$1" pin="A"/>
-<pinref part="ESP8266" gate="G$1" pin="GPIO5"/>
-<wire x1="111.76" y1="40.64" x2="104.14" y2="40.64" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="GPIO2/SDA" class="0">
 <segment>
 <label x="121.92" y="35.56" size="1.27" layer="95" xref="yes"/>
@@ -8558,18 +8563,6 @@ accel/gryo and mag I2C addresses:</text>
 <label x="274.32" y="154.94" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="GPIO16/RGB" class="0">
-<segment>
-<wire x1="68.58" y1="40.64" x2="66.04" y2="40.64" width="0.1524" layer="91"/>
-<label x="66.04" y="40.64" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="ESP8266" gate="G$1" pin="GPIO16"/>
-</segment>
-<segment>
-<pinref part="D1" gate="G$1" pin="DIN"/>
-<wire x1="284.48" y1="106.68" x2="287.02" y2="106.68" width="0.1524" layer="91"/>
-<label x="287.02" y="106.68" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
 <net name="N$10" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="ALERT"/>
@@ -8671,6 +8664,22 @@ accel/gryo and mag I2C addresses:</text>
 <pinref part="ESP8266" gate="G$1" pin="GPIO12"/>
 <wire x1="68.58" y1="35.56" x2="66.04" y2="35.56" width="0.1524" layer="91"/>
 <label x="66.04" y="35.56" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="GPIO5_LEDS" class="0">
+<segment>
+<wire x1="111.76" y1="40.64" x2="111.76" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="40.64" x2="121.92" y2="40.64" width="0.1524" layer="91"/>
+<junction x="111.76" y="40.64"/>
+<label x="121.92" y="40.64" size="1.27" layer="95" xref="yes"/>
+<pinref part="LED_USER" gate="G$1" pin="A"/>
+<pinref part="ESP8266" gate="G$1" pin="GPIO5"/>
+<wire x1="111.76" y1="40.64" x2="104.14" y2="40.64" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="D1" gate="G$1" pin="DIN"/>
+<wire x1="284.48" y1="106.68" x2="287.02" y2="106.68" width="0.1524" layer="91"/>
+<label x="287.02" y="106.68" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
