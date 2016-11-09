@@ -4844,7 +4844,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="R7" library="SparkFun-Resistors" deviceset="1.5KOHM1/10W1%(0603)" device="" value="100"/>
 <part name="R8" library="SparkFun-Resistors" deviceset="1.5KOHM1/10W1%(0603)" device="" value="10k"/>
 <part name="ATMEGA168P" library="GRITSBot" deviceset="ATMEGA168" device=""/>
-<part name="LED_RIGHT" library="SparkFun-LED" deviceset="LED" device="0603" value="red"/>
+<part name="LED_RIGHT" library="SparkFun-LED" deviceset="LED" device="0603" value="green"/>
 <part name="R1" library="SparkFun-Resistors" deviceset="1.5KOHM1/10W1%(0603)" device="" value="1k"/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="R2" library="SparkFun-Resistors" deviceset="1.5KOHM1/10W1%(0603)" device="" value="10k"/>
@@ -4869,7 +4869,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="JP_VCHRG" library="SparkFun-Connectors" deviceset="M02" device="1X02_NO_SILK"/>
 <part name="JP_GND" library="SparkFun-Connectors" deviceset="M02" device="1X02_NO_SILK"/>
 <part name="JP_PROG" library="GRITSBot" deviceset="3X2_SMD_HEADER" device=""/>
-<part name="LED_LEFT" library="SparkFun-LED" deviceset="LED" device="0603" value="red"/>
+<part name="LED_LEFT" library="SparkFun-LED" deviceset="LED" device="0603" value="green"/>
 <part name="R3" library="SparkFun-Resistors" deviceset="1.5KOHM1/10W1%(0603)" device="" value="1k"/>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="JP5" library="abes" deviceset="FIDUCIAL" device="1X2.5"/>
