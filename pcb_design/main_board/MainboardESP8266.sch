@@ -7348,6 +7348,7 @@ Source: RS Component / Phycomp</description>
 <part name="GND25" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY2" library="SparkFun-Aesthetics" deviceset="VDD" device=""/>
 <part name="R19" library="SparkFun-Passives" deviceset="RESISTOR-ARRAY" device="0603-ARV" value="10k"/>
+<part name="TP15" library="testpad" deviceset="PTR1" device="B1,27"/>
 </parts>
 <sheets>
 <sheet>
@@ -7471,8 +7472,8 @@ input pins not 5V-tolerant)</text>
 <text x="287.02" y="157.48" size="1.778" layer="98">TP13</text>
 <text x="287.02" y="154.94" size="1.778" layer="98">TP12</text>
 <text x="287.02" y="149.86" size="1.778" layer="98">TP14</text>
-<text x="287.02" y="144.78" size="1.778" layer="98">TP6</text>
-<text x="287.02" y="142.24" size="1.778" layer="98">TP7</text>
+<text x="287.02" y="142.24" size="1.778" layer="98">TP6</text>
+<text x="287.02" y="139.7" size="1.778" layer="98">TP7</text>
 <text x="287.02" y="134.62" size="1.778" layer="98">TP2</text>
 <text x="287.02" y="132.08" size="1.778" layer="98">TP3</text>
 <text x="287.02" y="129.54" size="1.778" layer="98">TP4</text>
@@ -7565,6 +7566,8 @@ accel/gryo and mag I2C addresses:</text>
 <text x="368.046" y="11.43" size="2.54" layer="98" align="bottom-center">0x1E</text>
 <text x="327.406" y="11.43" size="2.54" layer="98" align="bottom-center">1</text>
 <text x="417.576" y="8.89" size="2.54" layer="94">Daniel Pickem</text>
+<text x="287.02" y="147.32" size="1.778" layer="98">TP15</text>
+<text x="309.88" y="132.08" size="1.778" layer="98" align="top-left">09112016: Added GPIO5 test pin</text>
 </plain>
 <instances>
 <instance part="R10" gate="G$1" x="170.18" y="53.34" smashed="yes" rot="R180">
@@ -7714,11 +7717,11 @@ accel/gryo and mag I2C addresses:</text>
 <instance part="TP13" gate="G$1" x="279.4" y="157.48" smashed="yes" rot="R90">
 <attribute name="TP_SIGNAL_NAME" x="281.94" y="158.75" size="1.778" layer="97" rot="R90"/>
 </instance>
-<instance part="TP6" gate="G$1" x="279.4" y="144.78" smashed="yes" rot="R90">
-<attribute name="TP_SIGNAL_NAME" x="281.94" y="146.05" size="1.778" layer="97" rot="R90"/>
-</instance>
-<instance part="TP7" gate="G$1" x="279.4" y="142.24" smashed="yes" rot="R90">
+<instance part="TP6" gate="G$1" x="279.4" y="142.24" smashed="yes" rot="R90">
 <attribute name="TP_SIGNAL_NAME" x="281.94" y="143.51" size="1.778" layer="97" rot="R90"/>
+</instance>
+<instance part="TP7" gate="G$1" x="279.4" y="139.7" smashed="yes" rot="R90">
+<attribute name="TP_SIGNAL_NAME" x="281.94" y="140.97" size="1.778" layer="97" rot="R90"/>
 </instance>
 <instance part="TP12" gate="G$1" x="279.4" y="154.94" smashed="yes" rot="R90">
 <attribute name="TP_SIGNAL_NAME" x="281.94" y="156.21" size="1.778" layer="97" rot="R90"/>
@@ -7776,6 +7779,9 @@ accel/gryo and mag I2C addresses:</text>
 <instance part="R19" gate="D" x="424.18" y="86.36" smashed="yes" rot="R90">
 <attribute name="NAME" x="427.7614" y="80.01" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="427.482" y="87.63" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="TP15" gate="G$1" x="279.4" y="147.32" smashed="yes" rot="R90">
+<attribute name="TP_SIGNAL_NAME" x="281.94" y="148.59" size="1.778" layer="97" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -8204,8 +8210,8 @@ accel/gryo and mag I2C addresses:</text>
 </segment>
 <segment>
 <pinref part="TP7" gate="G$1" pin="TP"/>
-<wire x1="276.86" y1="142.24" x2="274.32" y2="142.24" width="0.1524" layer="91"/>
-<label x="274.32" y="142.24" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="276.86" y1="139.7" x2="274.32" y2="139.7" width="0.1524" layer="91"/>
+<label x="274.32" y="139.7" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="SCL"/>
@@ -8275,8 +8281,8 @@ accel/gryo and mag I2C addresses:</text>
 </segment>
 <segment>
 <pinref part="TP6" gate="G$1" pin="TP"/>
-<wire x1="276.86" y1="144.78" x2="274.32" y2="144.78" width="0.1524" layer="91"/>
-<label x="274.32" y="144.78" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="276.86" y1="142.24" x2="274.32" y2="142.24" width="0.1524" layer="91"/>
+<label x="274.32" y="142.24" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="SDA"/>
@@ -8680,6 +8686,11 @@ accel/gryo and mag I2C addresses:</text>
 <pinref part="D1" gate="G$1" pin="DIN"/>
 <wire x1="284.48" y1="106.68" x2="287.02" y2="106.68" width="0.1524" layer="91"/>
 <label x="287.02" y="106.68" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="TP15" gate="G$1" pin="TP"/>
+<wire x1="276.86" y1="147.32" x2="274.32" y2="147.32" width="0.1524" layer="91"/>
+<label x="274.32" y="147.32" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
