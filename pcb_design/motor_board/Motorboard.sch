@@ -1746,14 +1746,6 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <text x="-1.5" y="2" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-1.5" y="-3" size="1.27" layer="27">&gt;VALUE</text>
 </package>
-<package name="SMTSO-256-ET">
-<wire x1="-2.286" y1="1.016" x2="-1.016" y2="2.286" width="1.016" layer="31" curve="-42.075022"/>
-<wire x1="1.016" y1="2.286" x2="2.286" y2="1.016" width="1.016" layer="31" curve="-42.075022"/>
-<wire x1="2.286" y1="-1.016" x2="1.016" y2="-2.286" width="1.016" layer="31" curve="-42.075022"/>
-<wire x1="-1.016" y1="-2.286" x2="-2.286" y2="-1.016" width="1.016" layer="31" curve="-42.075022"/>
-<circle x="0" y="0" radius="1.016" width="0.127" layer="51"/>
-<pad name="P$1" x="0" y="0" drill="3.81" diameter="6.1976"/>
-</package>
 <package name="SMTRA-256-8-6">
 <pad name="P$1" x="-1.9939" y="0" drill="1.3462"/>
 <pad name="P$2" x="1.9939" y="0" drill="1.3462"/>
@@ -1855,6 +1847,21 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <pad name="1" x="0" y="0" drill="1.016" diameter="1.8796" rot="R90" stop="no"/>
 <circle x="0" y="0" radius="0.508" width="0" layer="29"/>
 <circle x="0" y="0" radius="0.9398" width="0" layer="30"/>
+</package>
+<package name="1X01_NO_SILK">
+<pad name="1" x="0" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<text x="1.1938" y="1.8288" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.27" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
+</package>
+<package name="SMTSO-256-ET-0.165DIA">
+<circle x="0" y="0" radius="1.016" width="0.127" layer="51"/>
+<wire x1="-1.016" y1="2.286" x2="-2.286" y2="1.016" width="1.016" layer="31" curve="42.075022"/>
+<wire x1="2.286" y1="1.016" x2="1.016" y2="2.286" width="1.016" layer="31" curve="42.075022"/>
+<wire x1="1.016" y1="-2.286" x2="2.286" y2="-1.016" width="1.016" layer="31" curve="42.075022"/>
+<wire x1="-2.286" y1="-1.016" x2="-1.016" y2="-2.286" width="1.016" layer="31" curve="42.075022"/>
+<pad name="P$1" x="0" y="0" drill="4.191" diameter="6.1976"/>
+<text x="-2.54" y="1.27" size="0.8128" layer="49">.165 drill</text>
 </package>
 </packages>
 <symbols>
@@ -2334,9 +2341,9 @@ Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 </device>
 </devices>
 </deviceset>
-<deviceset name="M01" prefix="JP">
+<deviceset name="M01" prefix="J" uservalue="yes">
 <description>&lt;b&gt;Header 1&lt;/b&gt;
-Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-00116), right angle break away headers (PRT-00553), swiss pins (PRT-00743), machine pins (PRT-00117), and female headers (PRT-00115).</description>
+Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-00116), right angle break away headers (PRT-00553), swiss pins (PRT-00743), machine pins (PRT-00117), and female headers (PRT-00115). SMTSO-256-ET is a "flush mount" nut for a 4-40 screw. The older package used to be too tight, and did not allow it to sit properly thru the drill hit. The latest (0.165DIA) fits nice and snug.</description>
 <gates>
 <gate name="G$1" symbol="M01" x="0" y="0"/>
 </gates>
@@ -2350,14 +2357,6 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 </technologies>
 </device>
 <device name="SMD" package="LUXEON-PAD">
-<connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="-SMTSO-256-ET" package="SMTSO-256-ET">
 <connects>
 <connect gate="G$1" pin="1" pad="P$1"/>
 </connects>
@@ -2456,6 +2455,22 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <device name="NOSILK-KIT" package="1X01NS-KIT">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="PTH_NO_SILK_YES_STOP" package="1X01_NO_SILK">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SMTSO-256-ET-0.165DIA" package="SMTSO-256-ET-0.165DIA">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -4843,7 +4858,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="LINE_SENSE_1" library="SparkFun-Sensors" deviceset="QRE1113" device=""/>
 <part name="R7" library="SparkFun-Resistors" deviceset="1.5KOHM1/10W1%(0603)" device="" value="100"/>
 <part name="R8" library="SparkFun-Resistors" deviceset="1.5KOHM1/10W1%(0603)" device="" value="10k"/>
-<part name="ATMEGA168P" library="GRITSBot" deviceset="ATMEGA168" device=""/>
+<part name="ATMEGA328P" library="GRITSBot" deviceset="ATMEGA168" device="" value="ATMEGA328"/>
 <part name="LED_RIGHT" library="SparkFun-LED" deviceset="LED" device="0603" value="green"/>
 <part name="R1" library="SparkFun-Resistors" deviceset="1.5KOHM1/10W1%(0603)" device="" value="1k"/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -5111,7 +5126,7 @@ IMOTOR_max: 500 mA</text>
 <attribute name="NAME" x="110.49" y="44.6786" size="1.778" layer="95"/>
 <attribute name="VALUE" x="110.49" y="39.878" size="1.778" layer="96"/>
 </instance>
-<instance part="ATMEGA168P" gate="G$1" x="106.68" y="137.16" smashed="yes">
+<instance part="ATMEGA328P" gate="G$1" x="106.68" y="137.16" smashed="yes">
 <attribute name="NAME" x="88.9" y="99.06" size="1.778" layer="95"/>
 <attribute name="VALUE" x="88.9" y="165.608" size="1.778" layer="96"/>
 </instance>
@@ -5346,12 +5361,12 @@ IMOTOR_max: 500 mA</text>
 <nets>
 <net name="GND" class="0">
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="AGND"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="AGND"/>
 <wire x1="83.82" y1="111.76" x2="78.74" y2="111.76" width="0.1524" layer="91"/>
-<pinref part="ATMEGA168P" gate="G$1" pin="GND@1"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="GND@1"/>
 <wire x1="83.82" y1="109.22" x2="78.74" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="111.76" x2="78.74" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="ATMEGA168P" gate="G$1" pin="GND@2"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="GND@2"/>
 <wire x1="83.82" y1="106.68" x2="78.74" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="109.22" x2="78.74" y2="106.68" width="0.1524" layer="91"/>
 <junction x="78.74" y="109.22"/>
@@ -5510,19 +5525,19 @@ IMOTOR_max: 500 mA</text>
 <wire x1="121.92" y1="53.34" x2="121.92" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="AVCC"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="AVCC"/>
 <wire x1="83.82" y1="157.48" x2="78.74" y2="157.48" width="0.1524" layer="91"/>
 <label x="73.66" y="157.48" size="1.778" layer="95"/>
-<pinref part="ATMEGA168P" gate="G$1" pin="VCC@1"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="VCC@1"/>
 <wire x1="83.82" y1="154.94" x2="78.74" y2="154.94" width="0.1524" layer="91"/>
 <label x="73.66" y="154.94" size="1.778" layer="95"/>
 <wire x1="78.74" y1="157.48" x2="78.74" y2="154.94" width="0.1524" layer="91"/>
-<pinref part="ATMEGA168P" gate="G$1" pin="VCC@2"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="VCC@2"/>
 <wire x1="83.82" y1="152.4" x2="78.74" y2="152.4" width="0.1524" layer="91"/>
 <label x="73.66" y="152.4" size="1.778" layer="95"/>
 <wire x1="78.74" y1="154.94" x2="78.74" y2="152.4" width="0.1524" layer="91"/>
 <junction x="78.74" y="154.94"/>
-<pinref part="ATMEGA168P" gate="G$1" pin="AREF"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="AREF"/>
 <wire x1="83.82" y1="147.32" x2="78.74" y2="147.32" width="0.1524" layer="91"/>
 <label x="73.66" y="147.32" size="1.778" layer="95"/>
 <wire x1="78.74" y1="152.4" x2="78.74" y2="147.32" width="0.1524" layer="91"/>
@@ -5589,7 +5604,7 @@ IMOTOR_max: 500 mA</text>
 </net>
 <net name="M2IN3" class="0">
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PB7(XTAL2/TOSC2)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PB7(XTAL2/TOSC2)"/>
 <wire x1="83.82" y1="132.08" x2="81.28" y2="132.08" width="0.1524" layer="91"/>
 <label x="81.28" y="132.08" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -5606,7 +5621,7 @@ IMOTOR_max: 500 mA</text>
 </net>
 <net name="M2IN4" class="0">
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PB6(XTAL1/TOSC1)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PB6(XTAL1/TOSC1)"/>
 <wire x1="83.82" y1="137.16" x2="81.28" y2="137.16" width="0.1524" layer="91"/>
 <label x="81.28" y="137.16" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -5623,7 +5638,7 @@ IMOTOR_max: 500 mA</text>
 </net>
 <net name="M2IN1" class="0">
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PD5(T1)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PD5(T1)"/>
 <wire x1="132.08" y1="127" x2="134.62" y2="127" width="0.1524" layer="91"/>
 <label x="134.62" y="127" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -5640,7 +5655,7 @@ IMOTOR_max: 500 mA</text>
 </net>
 <net name="M2IN2" class="0">
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PD6(AIN0)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PD6(AIN0)"/>
 <wire x1="132.08" y1="124.46" x2="134.62" y2="124.46" width="0.1524" layer="91"/>
 <label x="134.62" y="124.46" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -5705,7 +5720,7 @@ IMOTOR_max: 500 mA</text>
 </net>
 <net name="M1IN1" class="0">
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PB1(OC1A)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PB1(OC1A)"/>
 <wire x1="132.08" y1="114.3" x2="134.62" y2="114.3" width="0.1524" layer="91"/>
 <label x="134.62" y="114.3" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -5746,7 +5761,7 @@ IMOTOR_max: 500 mA</text>
 </net>
 <net name="M1IN2" class="0">
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PB2(SS/OC1B)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PB2(SS/OC1B)"/>
 <wire x1="132.08" y1="111.76" x2="134.62" y2="111.76" width="0.1524" layer="91"/>
 <label x="134.62" y="111.76" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -5763,7 +5778,7 @@ IMOTOR_max: 500 mA</text>
 </net>
 <net name="M1IN3" class="0">
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PB0(ICP)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PB0(ICP)"/>
 <wire x1="132.08" y1="116.84" x2="134.62" y2="116.84" width="0.1524" layer="91"/>
 <label x="134.62" y="116.84" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -5804,7 +5819,7 @@ IMOTOR_max: 500 mA</text>
 </net>
 <net name="M1IN4" class="0">
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PD7(AIN1)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PD7(AIN1)"/>
 <wire x1="132.08" y1="121.92" x2="134.62" y2="121.92" width="0.1524" layer="91"/>
 <label x="134.62" y="121.92" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -5821,7 +5836,7 @@ IMOTOR_max: 500 mA</text>
 </net>
 <net name="MOSI" class="0">
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PB3(MOSI/OC2)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PB3(MOSI/OC2)"/>
 <wire x1="132.08" y1="109.22" x2="134.62" y2="109.22" width="0.1524" layer="91"/>
 <label x="134.62" y="109.22" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -5838,7 +5853,7 @@ IMOTOR_max: 500 mA</text>
 </net>
 <net name="MISO" class="0">
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PB4(MISO)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PB4(MISO)"/>
 <wire x1="132.08" y1="106.68" x2="134.62" y2="106.68" width="0.1524" layer="91"/>
 <label x="134.62" y="106.68" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -5855,7 +5870,7 @@ IMOTOR_max: 500 mA</text>
 </net>
 <net name="SCK" class="0">
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PB5(SCK)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PB5(SCK)"/>
 <wire x1="132.08" y1="104.14" x2="134.62" y2="104.14" width="0.1524" layer="91"/>
 <label x="134.62" y="104.14" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -5872,7 +5887,7 @@ IMOTOR_max: 500 mA</text>
 </net>
 <net name="RESET" class="0">
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PC6(/RESET)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PC6(/RESET)"/>
 <label x="71.12" y="162.56" size="1.778" layer="95"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="71.12" y1="162.56" x2="68.58" y2="162.56" width="0.1524" layer="91"/>
@@ -5908,7 +5923,7 @@ IMOTOR_max: 500 mA</text>
 <label x="124.46" y="50.8" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PD1(TXD)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PD1(TXD)"/>
 <wire x1="132.08" y1="137.16" x2="134.62" y2="137.16" width="0.1524" layer="91"/>
 <label x="134.62" y="137.16" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -5925,7 +5940,7 @@ IMOTOR_max: 500 mA</text>
 <label x="124.46" y="76.2" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PD0(RXD)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PD0(RXD)"/>
 <wire x1="132.08" y1="139.7" x2="134.62" y2="139.7" width="0.1524" layer="91"/>
 <label x="134.62" y="139.7" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -5942,7 +5957,7 @@ IMOTOR_max: 500 mA</text>
 <wire x1="109.22" y1="50.8" x2="104.14" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="VBAT" class="0">
+<net name="VDD" class="0">
 <segment>
 <wire x1="12.7" y1="170.18" x2="15.24" y2="170.18" width="0.1524" layer="91"/>
 <label x="15.24" y="170.18" size="1.27" layer="95" xref="yes"/>
@@ -5963,7 +5978,7 @@ IMOTOR_max: 500 mA</text>
 </net>
 <net name="A4_SDA" class="0">
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PC4(ADC4/SDA)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PC4(ADC4/SDA)"/>
 <wire x1="134.62" y1="152.4" x2="132.08" y2="152.4" width="0.1524" layer="91"/>
 <label x="134.62" y="152.4" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -5985,7 +6000,7 @@ IMOTOR_max: 500 mA</text>
 </net>
 <net name="A5_SCL" class="0">
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PC5(ADC5/SCL)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PC5(ADC5/SCL)"/>
 <wire x1="134.62" y1="149.86" x2="132.08" y2="149.86" width="0.1524" layer="91"/>
 <label x="134.62" y="149.86" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -6014,7 +6029,7 @@ IMOTOR_max: 500 mA</text>
 </net>
 <net name="AD3_LINE_RIGHT" class="0">
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PC3(ADC3)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PC3(ADC3)"/>
 <wire x1="132.08" y1="154.94" x2="134.62" y2="154.94" width="0.1524" layer="91"/>
 <label x="134.62" y="154.94" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -6036,7 +6051,7 @@ IMOTOR_max: 500 mA</text>
 </net>
 <net name="AD2_LINE_LEFT" class="0">
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PC2(ADC2)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PC2(ADC2)"/>
 <wire x1="132.08" y1="157.48" x2="134.62" y2="157.48" width="0.1524" layer="91"/>
 <label x="134.62" y="157.48" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -6087,7 +6102,7 @@ IMOTOR_max: 500 mA</text>
 <label x="233.68" y="60.96" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PD2(INT0)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PD2(INT0)"/>
 <wire x1="132.08" y1="134.62" x2="134.62" y2="134.62" width="0.1524" layer="91"/>
 <label x="134.62" y="134.62" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -6104,7 +6119,7 @@ IMOTOR_max: 500 mA</text>
 <label x="233.68" y="76.2" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PD4(XCK/T0)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PD4(XCK/T0)"/>
 <wire x1="132.08" y1="129.54" x2="134.62" y2="129.54" width="0.1524" layer="91"/>
 <label x="134.62" y="129.54" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -6121,7 +6136,7 @@ IMOTOR_max: 500 mA</text>
 <label x="271.78" y="157.48" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="ADC7"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="ADC7"/>
 <wire x1="132.08" y1="144.78" x2="134.62" y2="144.78" width="0.1524" layer="91"/>
 <label x="134.62" y="144.78" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -6138,7 +6153,7 @@ IMOTOR_max: 500 mA</text>
 <label x="271.78" y="129.54" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="ADC6"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="ADC6"/>
 <wire x1="132.08" y1="147.32" x2="134.62" y2="147.32" width="0.1524" layer="91"/>
 <label x="134.62" y="147.32" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -6156,7 +6171,7 @@ IMOTOR_max: 500 mA</text>
 <label x="274.32" y="35.56" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PC1(ADC1)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PC1(ADC1)"/>
 <wire x1="132.08" y1="160.02" x2="134.62" y2="160.02" width="0.1524" layer="91"/>
 <label x="134.62" y="160.02" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -6174,7 +6189,7 @@ IMOTOR_max: 500 mA</text>
 <label x="274.32" y="68.58" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PC0(ADC0)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PC0(ADC0)"/>
 <wire x1="132.08" y1="162.56" x2="134.62" y2="162.56" width="0.1524" layer="91"/>
 <label x="134.62" y="162.56" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -6224,7 +6239,7 @@ IMOTOR_max: 500 mA</text>
 </net>
 <net name="ESP_RESET" class="0">
 <segment>
-<pinref part="ATMEGA168P" gate="G$1" pin="PD3(INT1)"/>
+<pinref part="ATMEGA328P" gate="G$1" pin="PD3(INT1)"/>
 <wire x1="132.08" y1="132.08" x2="134.62" y2="132.08" width="0.1524" layer="91"/>
 <label x="134.62" y="132.08" size="1.27" layer="95" xref="yes"/>
 </segment>
