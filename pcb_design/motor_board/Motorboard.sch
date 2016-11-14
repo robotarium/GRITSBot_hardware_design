@@ -4948,7 +4948,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="48.26" y1="91.44" x2="48.26" y2="185.42" width="0.3048" layer="97" style="shortdash"/>
 <text x="2.54" y="180.34" size="2.54" layer="94">Connectors</text>
 <text x="50.8" y="176.53" size="2.54" layer="94">Microcontroller 
-Atmega Atmega168P</text>
+Atmega Atmega328P</text>
 <wire x1="147.32" y1="91.44" x2="78.74" y2="91.44" width="0.3048" layer="97" style="shortdash"/>
 <wire x1="78.74" y1="91.44" x2="48.26" y2="91.44" width="0.3048" layer="97" style="shortdash"/>
 <wire x1="78.74" y1="91.44" x2="78.74" y2="35.56" width="0.3048" layer="97" style="shortdash"/>
