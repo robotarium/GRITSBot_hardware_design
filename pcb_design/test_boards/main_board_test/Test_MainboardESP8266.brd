@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.254" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.05" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.05" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -199,6 +199,10 @@ https://creativecommons.org/licenses/by-sa/4.0/</text>
 <vertex x="16.51" y="35.814"/>
 <vertex x="16.51" y="36.322"/>
 </polygon>
+<text x="48.2" y="31.6" size="0.8128" layer="51">TODO:
+- Make sure all silk screen labels are at least of size 0.6096
+- This is cosmetic but make sure the positions and lengths are round
+   numbers in mm</text>
 </plain>
 <libraries>
 <library name="OSHW">

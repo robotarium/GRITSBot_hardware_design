@@ -225,6 +225,13 @@ https://creativecommons.org/licenses/by-sa/4.0/</text>
 <vertex x="17.018" y="37.338"/>
 <vertex x="17.018" y="37.846"/>
 </polygon>
+<text x="48.246" y="25.708" size="0.8128" layer="51">TODO:
+- Make sure all silk screen labels are at least of size 0.6096
+- This is cosmetic but make sure the positions and lengths are round
+   numbers in mm
+- Again cosmetic, but make sure traces only run at 45 degree angles 
+   (or horizontal or vertical)
+- Make sure vias are round and of size 0.381 (min. size Oshpark can do)</text>
 </plain>
 <libraries>
 <library name="GRITSBot">
